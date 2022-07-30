@@ -7,7 +7,13 @@
         {
             "name": "is_there_eggs",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "-d",
+                "web-server",
+                "--web-port=3000",
+                "--web-hostname=0.0.0.0"
+            ]
         },
         {
             "name": "is_there_eggs (profile mode)",

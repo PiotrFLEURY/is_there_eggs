@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:is_there_eggs/presentation/home/home.dart';
@@ -35,7 +36,7 @@ class IsThereEgg extends StatelessWidget {
       routeInformationProvider: _router.routeInformationProvider,
       routeInformationParser: _router.routeInformationParser,
       routerDelegate: _router.routerDelegate,
-      title: 'GoRouter Example',
+      title: 'Is There Eggs?',
       //darkTheme: ThemeData.dark(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
@@ -47,6 +48,16 @@ class IsThereEgg extends StatelessWidget {
           background: const Color(0xffE0D68A),
         ),
       ),
+      scrollBehavior: CustomScrollBehavior(),
     );
   }
+}
+
+class CustomScrollBehavior extends MaterialScrollBehavior {
+  // Override behavior methods and getters like dragDevices
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
 }
