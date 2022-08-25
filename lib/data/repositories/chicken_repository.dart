@@ -19,11 +19,6 @@ class ChickenRepositoryImpl extends ChickenRepository {
       image: 'chicken_3.jpg',
     ),
     Chicken(
-      name: 'La poule rousse',
-      description: "Un grand classique",
-      image: 'chicken_4.jpg',
-    ),
-    Chicken(
       name: 'La Padou',
       description: "Notre star !",
       image: 'chicken_5.jpg',

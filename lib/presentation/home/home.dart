@@ -46,7 +46,7 @@ class Home extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * .33,
+              height: MediaQuery.of(context).size.height * .5,
               width: MediaQuery.of(context).size.width,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -75,6 +75,17 @@ class Home extends StatelessWidget {
                     ),
                   );
                 },
+              ),
+            ),
+            Expanded(
+              child: Center(
+                child: Text(
+                  'Aucune poule n\'a été trouvée',
+                  style: GoogleFonts.oswald(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ],
